@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="invoice">
+        <h1>Invoice</h1>
+        <p>Invoice Number: #001</p>
+        <p>Date: September 20, 2025</p>
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add your dynamic rows here; this is a sample with many items to test pagination -->
+                <tr><td>Item 1</td><td>2</td><td>$10</td><td>$20</td></tr>
+                <tr><td>Item 2</td><td>1</td><td>$15</td><td>$15</td></tr>
+                <!-- Repeat for 20+ rows to simulate long content -->
+                <tr><td>Item 20</td><td>3</td><td>$5</td><td>$15</td></tr>
+            </tbody>
+        </table>
+        <p class="totals">Grand Total: $500</p>
+    </div>
+    <button onclick="generatePDF()">Download PDF</button>
+    <button onclick="generateJPEG()">Download JPEG</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
